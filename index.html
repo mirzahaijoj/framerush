@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Framerush - Motion Design Studio</title>
+  <meta name="description" content="Framerush is a motion design studio helping brands stand out with premium, story-driven animation." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Social preview (Open Graph) -->
+<meta property="og:title" content="Framerush — Motion Design Studio" />
+<meta property="og:description" content="Framerush crafts premium motion for startups, agencies, ecommerce, and app teams—clean, modern, story-driven animation that gets attention and feels high-end." />
+<meta property="og:image" content="https://framerushstudio.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://framerushstudio.com/" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://YOUR-NETLIFY-URL.netlify.app/assets/og/og.jpg" />
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Framerush home">
+        <img class="logo" src="logo.svg" alt="Framerush logo" />
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <div id="menuWrap" class="menu-wrap-header">
+        <nav class="nav">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <span id="themeIcon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+  <div class="container hero-center">
+    <h1>We make your brand stand out.</h1>
+
+    <p class="lead">
+      Framerush crafts premium motion for startups, agencies, ecommerce, and app teams—clean, modern,
+      story-driven animation that gets attention and feels high-end.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn primary" href="#work">View projects</a>
+      <a class="btn" href="#contact">Contact</a>
+    </div>
+
+    <div class="meta-row">
+      <a href="https://www.instagram.com/framerush.stu/" target="_blank" rel="noopener">Instagram</a>
+      <span class="dot">•</span>
+      <a href="https://www.linkedin.com/company/110001625/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Work</h2>
+
+        <div class="grid">
+          <a class="card card-link" href="project-1.html" aria-label="Open Project One page">
+            <img class="thumb" src="assets/thumbs/project-1.jpg" alt="Project One thumbnail" />
+            <h3>Kreabo</h3>
+            <p class="muted">We developed the concept in collaboration with the Kreabo team and handled the full animation process.</p>
+            <span class="card-cta">View project →</span>
+          </a>
+
+          <a class="card card-link" href="project-2.html" aria-label="Open Project Two page">
+            <img class="thumb" src="assets/thumbs/project-2.jpg" alt="Project Two thumbnail" />
+            <h3>CryptoRush</h3>
+            <p class="muted">Created a high-energy commercial animation for CryptoRush, delivering engaging visuals and dynamic motion design to captivate audiences on YouTube.</p>
+            <span class="card-cta">View project →</span>
+          </a>
+
+          <a class="card card-link" href="project-3.html" aria-label="Open Project Three page">
+            <img class="thumb" src="assets/thumbs/project-3.jpg" alt="Project Three thumbnail" />
+            <h3>Blueshift.fi WEB3</h3>
+            <p class="muted">Designed animated and static assets for social media to enhance brand identity and communicate complex Web3 concepts effectively.</p>
+            <span class="card-cta">View project →</span>
+          </a>
+          
+        </div>
+
+        <div class="work-actions">
+          <button class="btn" id="toggleProjects" type="button"
+                  aria-expanded="false" aria-controls="moreProjectsWrap">
+            Show all projects
+          </button>
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="pill-row">
+          <span class="pill">Brand Animation</span>
+          <span class="pill">App UI Animation</span>
+          <span class="pill">Social Media Animations</span>
+          <span class="pill">TV Commercials</span>
+          <span class="pill">Explainer Videos</span>
+          <span class="pill">Product Promos</span>
+          <span class="pill">3D Motion Graphics</span>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p class="muted about">
+          Framerush is a motion design studio focused on premium animation that helps brands look sharper, feel more modern,
+          and communicate faster. We blend clean design with purposeful motion—so every transition, reveal, and movement
+          supports the message. Whether you’re launching an app, promoting a product, or building a full brand system,
+          we create animation that’s polished, story-driven, and built to perform across platforms.
+          <br /><br />
+          If you want motion that’s minimal, premium, and unmistakably on-brand, Framerush can help you stand out.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head section-head-stack">
+  <h2>Contact</h2>
+  <p class="muted">Tell us what you’re building. We’ll reply by email.</p>
+</div>
+
+        <!-- Netlify Forms + Honeypot + Redirect -->
+        <form
+          class="form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thanks.html"
+        >
+          <!-- Required: must match name="contact" -->
+          <input type="hidden" name="form-name" value="contact" />
+
+          <!-- Honeypot field (spam protection) -->
+          <p style="display:none">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <label>
+            Name
+            <input name="name" type="text" autocomplete="name" required />
+          </label>
+
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+
+          <label>
+            Message
+            <textarea name="message" rows="5" required placeholder="What do you need animated?"></textarea>
+          </label>
+
+          <button class="btn primary" type="submit">Send message</button>
+
+          <p class="form-note muted">
+            Prefer email? <a href="mailto:framerush.motion@gmail.com">framerush.motion@gmail.com</a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <span class="muted">© <span id="year"></span> Framerush</span>
+      <span class="muted">Motion Design Studio</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

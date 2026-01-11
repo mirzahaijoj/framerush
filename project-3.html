@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blueshift.fi — Framerush</title>
+  <meta name="description" content="Project One — Framerush motion design project." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Social preview (Open Graph) -->
+<meta property="og:title" content="Framerush — Motion Design Studio" />
+<meta property="og:description" content="Framerush crafts premium motion for startups, agencies, ecommerce, and app teams—clean, modern, story-driven animation that gets attention and feels high-end." />
+<meta property="og:image" content="https://YOUR-NETLIFY-URL.netlify.app/assets/og/og.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://YOUR-NETLIFY-URL.netlify.app/" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://YOUR-NETLIFY-URL.netlify.app/assets/og/og.jpg" />
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Framerush home">
+        <img class="logo" src="logo.svg" alt="Framerush logo" />
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <div id="menuWrap" class="menu-wrap-header">
+        <nav class="nav">
+          <a href="index.html#work">Work</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <span id="themeIcon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="project">
+    <div class="container">
+      <a class="back" href="index.html#work">← Back to projects</a>
+
+      <div class="project-hero">
+        <h1>Blueshift.fi - Web3 Graphics</h1>
+        <p class="muted">Designed animated and static assets for social media to enhance brand identity and communicate complex Web3 concepts effectively.</p>
+
+        <div class="project-meta">
+          <div>
+            <span class="label">Client</span>
+            <span class="value">Blueshift.fi</span>
+          </div>
+          <div>
+            <span class="label">Role</span>
+            <span class="value">Motion Design, Social Media</span>
+          </div>
+          <div>
+            <span class="label">Tools</span>
+            <span class="value">After Effects, Illustrator</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="project-section">
+        <h2>Animations</h2>
+        <p class="muted">Simplifying complex blockchain concepts through motion.</p>
+
+        <div class="video-grid">
+          <div class="video">
+            <video class="video-player" controls preload="metadata" playsinline>
+              <source src="assets/videos/project3-01.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Add more videos if they exist -->
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>Summary</h2>
+        <p class="muted">
+          We worked closely with the Blueshift team to create a suite of assets that could be used across Twitter and Discord.
+          The focus was on clean, futuristic visuals that align with the Web3 aesthetic while keeping the information accessible.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h2>Contact</h2>
+        <p class="muted">Want something like this for your brand?</p>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:framerush.motion@gmail.com">Email Framerush</a>
+          <a class="btn" href="index.html#contact">Use contact form</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <span class="muted">© <span id="year"></span> Framerush</span>
+      <span class="muted">Motion Design Studio</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
