@@ -101,3 +101,75 @@ document.querySelectorAll("video.video-player").forEach((v) => {
     });
   });
 })();
+
+// Formspree AJAX Submission
+(function () {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("contact-status");
+
+  if (!form || !status) return;
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    status.style.display = "none";
+    status.className = "";
+    status.innerHTML = "";
+
+    // Check if the placeholder ID is still there
+    if (form.action.includes("YOUR_FORM_ID")) {
+      status.innerHTML = "⚠️ Please replace 'YOUR_FORM_ID' in index.html with your actual Formspree Form ID.";
+      status.style.color = "#856404";
+      status.style.backgroundColor = "#fff3cd";
+      status.style.border = "1px solid #ffeeba";
+      status.style.display = "block";
+      return;
+    }
+
+    const data = new FormData(event.target);
+    const submitBtn = form.querySelector("button[type='submit']");
+    const originalBtnText = submitBtn ? submitBtn.textContent : "Send";
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+    }
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        status.innerHTML = "✅ Thanks for your submission!";
+        status.style.display = "block";
+        status.className = "success"; // We will add styles for this
+        form.reset();
+      } else {
+        if (Object.hasOwn(result, 'errors')) {
+          status.innerHTML = result.errors.map(error => error["message"]).join(", ");
+        } else {
+          status.innerHTML = "❌ Oops! There was a problem submitting your form";
+        }
+        status.style.display = "block";
+        status.className = "error"; // We will add styles for this
+      }
+    } catch (error) {
+      status.innerHTML = "❌ Oops! There was a problem submitting your form";
+      status.style.display = "block";
+      status.className = "error";
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+    }
+  }
+
+  form.addEventListener("submit", handleSubmit);
+})();

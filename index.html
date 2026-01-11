@@ -151,19 +151,12 @@
         <!-- Netlify Forms + Honeypot + Redirect -->
         <form
           class="form"
-          name="contact"
+          id="contact-form"
+          action="https://formspree.io/f/mreeznpo"
           method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/thanks.html"
         >
-          <!-- Required: must match name="contact" -->
-          <input type="hidden" name="form-name" value="contact" />
-
-          <!-- Honeypot field (spam protection) -->
-          <p style="display:none">
-            <label>Don’t fill this out: <input name="bot-field" /></label>
-          </p>
+          <!-- Status message area -->
+          <div id="contact-status" style="display: none; margin-bottom: 1rem; padding: 10px; border-radius: 8px;"></div>
 
           <label>
             Name
