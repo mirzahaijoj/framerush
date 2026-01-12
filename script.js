@@ -173,3 +173,39 @@ document.querySelectorAll("video.video-player").forEach((v) => {
 
   form.addEventListener("submit", handleSubmit);
 })();
+
+// Sticky Header with Scroll Detection
+(function () {
+  const header = document.querySelector('.header');
+  if (!header) return;
+
+  let lastScroll = 0;
+  const scrollThreshold = 50; // pixels to scroll before adding class
+
+  function handleScroll() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > scrollThreshold) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+
+    lastScroll = currentScroll;
+  }
+
+  // Throttle scroll events for better performance
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Initial check
+  handleScroll();
+})();
