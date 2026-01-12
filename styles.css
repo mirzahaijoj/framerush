@@ -33,6 +33,7 @@ body{
 }
 html{
   scroll-padding-top: 90px;
+  overflow-x: hidden;
 }
 
 /* Fix for horizontal scroll while keeping sticky header */
